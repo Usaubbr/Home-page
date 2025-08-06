@@ -1,0 +1,105 @@
+/* Projects Section Styles */
+#projects {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.project .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project .btn:hover {
+    background-color: #e67e22;
+}
+/* Media Queries for Responsive Design */
+
+/* Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hero Section */
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    /* Projects and Blog Grid */
+    .projects-grid, .blog-posts {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Form */
+    #contact form {
+        width: 90%;
+    }
+}
+
+/* Tablet Devices (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Projects and Blog Grid */
+    .projects-grid, .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Devices (1024px and above) */
+@media (min-width: 1024px) {
+    /* Projects and Blog Grid */
+    .projects-grid, .blog-posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
